@@ -6,11 +6,80 @@
   <meta name="viewport" content="width=device-width">
   <title>LiveLab 4 Demo</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- Add Google Fonts link for Roboto -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  Hello world
+  <!-- Simple responsive nav bar -->
+  <nav class="navbar">
+    <!-- Logo or site name -->
+    <div class="logo">Eco-Friendly Destinations</div>
+    <!-- Navigation links -->
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Browse</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Login</a></li>
+    </ul>
+    <!-- Hamburger menu icon for small screens -->
+    <div class="menu-icon" onclick="toggleMenu()">
+      <!-- Simple hamburger icon using 3 bars -->
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </nav>
+
+  <!-- Hero section introducing the site's mission -->
+  <section class="hero">
+    <!-- Headline for the hero section -->
+    <h1>Explore Sustainable Travel</h1>
+    <!-- Subtext for more information -->
+    <p>Discover eco-friendly destinations, tips, and stories to make your adventures better for the planet.</p>
+    <!-- Call-to-action message and button -->
+    <div class="hero-action">
+      <span>Ready to start your adventure?</span>
+      <a href="#" class="hero-btn">Plan Your Trip</a>
+    </div>
+  </section>
+
+  <!-- Eco-friendly destinations section -->
+  <section class="destinations">
+    <h2>Eco-Friendly Destinations</h2>
+    <div class="card-container">
+      <!-- Card 1 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+          alt="Banff National Park">
+        <h3>Banff National Park</h3>
+        <p>Experience the beauty of Canada's Rockies while supporting conservation and sustainable tourism.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80"
+          alt="Costa Rica">
+        <h3>Costa Rica</h3>
+        <p>Discover rainforests, wildlife, and eco-lodges in one of the world's greenest countries.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80"
+          alt="New Zealand">
+        <h3>New Zealand</h3>
+        <p>Explore stunning landscapes and eco-adventures in a country committed to sustainability.</p>
+      </div>
+    </div>
+  </section>
+
   <script src="script.js"></script>
+  <script>
+    // This function shows/hides the nav links on small screens
+    function toggleMenu() {
+      var links = document.querySelector('.nav-links');
+      links.classList.toggle('active');
+    }
+  </script>
 </body>
 
 </html>

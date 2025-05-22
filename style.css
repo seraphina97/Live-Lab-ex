@@ -1,0 +1,225 @@
+/* Style for the navbar */
+.navbar {
+  display: flex; /* Arrange items in a row */
+  align-items: center; /* Vertically center items */
+  justify-content: space-between; /* Space between logo and links */
+  background-color: #3D405B; /* New header color */
+  padding: 10px 20px;
+}
+
+/* Logo style */
+.logo {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #F4F1DE; /* Make logo match button color for contrast */
+}
+
+/* Navigation links style */
+.nav-links {
+  list-style: none; /* Remove bullets */
+  display: flex; /* Arrange links in a row */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px; /* Space between links */
+}
+
+.nav-links a {
+  text-decoration: none; /* Remove underline */
+  color: white;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #333; /* Darker on hover */
+}
+
+/* Hamburger menu icon styles */
+.menu-icon {
+  display: none; /* Hide by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 2px;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none; /* Hide links by default */
+    position: absolute;
+    top: 60px; /* Below navbar */
+    right: 20px;
+    background: #f47521;
+    flex-direction: column;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+  .nav-links li {
+    margin: 15px 0;
+    text-align: right;
+    margin-right: 15px;
+  }
+  .menu-icon {
+    display: flex; /* Show hamburger icon */
+  }
+}
+
+/* Hero section styles */
+.hero {
+  background: #E07A5F; /* New background color */
+  background-color: #E07A5F;
+  text-align: center; /* Center text */
+  padding: 60px 20px; /* Space around content */
+  margin-top: 0; /* No gap above */
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  color: #F4F1DE; /* Light color for headline */
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #fff; /* White text for contrast */
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Hero action message and button styles */
+.hero-action {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero-action span {
+  font-size: 1.1em;
+  color: #fff; /* White text for contrast */
+}
+
+.hero-btn {
+  display: inline-block;
+  background: #F4F1DE; /* New button color */
+  color: #3D405B; /* Dark text for contrast */
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.hero-btn:hover {
+  background: #fff; /* Slightly lighter on hover */
+}
+
+/* Destinations section styles */
+.destinations {
+  padding: 40px 10px;
+  background: #E07A5F; /* Match hero background */
+  text-align: center;
+}
+
+.destinations h2 {
+  color: #F4F1DE; /* Light color for section title */
+  margin-bottom: 30px;
+}
+
+/* Card container: mobile-first (stacked) */
+.card-container {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically by default */
+  gap: 20px; /* Space between cards */
+  align-items: center;
+}
+
+.card {
+  background: #F4F1DE; /* Updated card background color */
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 20px;
+  max-width: 320px;
+  width: 100%;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  margin: 10px 0 8px 0;
+  color: #333;
+}
+
+.card p {
+  color: #555;
+  font-size: 1em;
+}
+
+/* Desktop layout: cards align horizontally */
+@media (min-width: 700px) {
+  .card-container {
+    flex-direction: row; /* Align cards in a row */
+    justify-content: center;
+  }
+}
+
+/* Global styles */
+body {
+  font-family: 'Roboto', Arial, sans-serif; /* Use Roboto for all text */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+}
